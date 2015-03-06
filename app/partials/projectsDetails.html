@@ -1,0 +1,85 @@
+<div>
+  <md-toolbar class="md-primary">
+    <div class="md-toolbar-tools">
+      <md-button ng-click="toggleSidenav('left')" class="md-primary" hide-gt-md>
+            <md-icon icon="/svg/ic_menu_24px.svg" style="width: 24px; height: 24px">
+                <object class="md-icon" data="/svg/ic_menu_24px.svg"></object>
+            </md-icon>
+      </md-button>
+      <h1 class="md-toolbar-tools">{{detail.name}}</h1>
+    </div>
+  </md-toolbar>
+
+  <md-content class="md-padding">
+    <p>{{detail.description}}</p>
+  </md-content>
+</div>
+
+
+<!--
+{
+   "_id":       "54f789e4439ef6ab5fb614f7"
+  ,"name":      "Project #1"
+  ,"owner":     "me"
+  ,"priority":  10
+  ,"created":   "2015-03-04T22:40:36.186Z"
+  ,"completed": null
+  ,"tasks":     [
+     "task number 1"
+    ,"task number 2"
+    ,"task number 3"
+    ,"task number 4"
+    ,"task number 5"
+  ]
+  ,"tags":      [
+     "tag1"
+    ,"tag2"
+    ,"tag3"
+  ]
+  ,"comments":  [
+  ]
+  ,"description":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident , sunt in culpa qui officia deserunt mollit anim id est laborum"
+}
+
+
+
+<div ng-app="inputErrorsApp" ng-controller="AppCtrl" layout="column">
+  <md-toolbar class="md-primary">
+    <h1 class="md-toolbar-tools">
+      Top Secret Project
+    </h1>
+  </md-toolbar>
+  <md-content class="md-padding">
+    <form name="projectForm">
+      <md-input-container>
+        <label>Description</label>
+        <input md-maxlength="30" required name="description" ng-model="project.description">
+        <div ng-messages="projectForm.description.$error">
+          <div ng-message="required">This is required.</div>
+          <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+        </div>
+      </md-input-container>
+      <md-input-container>
+        <label>Client Name</label>
+        <input required name="clientName" ng-model="project.clientName">
+        <div ng-messages="projectForm.clientName.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+      <md-input-container>
+        <label>Hourly Rate (USD)</label>
+        <input required type="number" step="any" name="rate" ng-model="project.rate" min="800" max="4999">
+        <div ng-messages="projectForm.rate.$error">
+          <div ng-message="required">You've got to charge something! You can't just <b>give away</b> a Missile Defense System.</div>
+          <div ng-message="min">You should charge at least $800 an hour. This job is a big deal... if you mess up, everyone dies!</div>
+          <div ng-message="max">$5,000 an hour? That's a little ridiculous. I doubt event Bill Clinton could afford that.</div>
+        </div>
+      </md-input-container>
+    </form>
+  </md-content>
+</div>
+
+
+.inputdemoErrors .inputErrorsApp {
+  min-height: 48px; }
+-->

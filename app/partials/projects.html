@@ -1,0 +1,22 @@
+<div layout="column" class="content">
+  <section layout="row" flex>
+    <md-sidenav
+      md-component-id="left" class="md-sidenav-left md-whiteframe-z2" 
+      md-is-locked-open="$media('gt-md')"
+    >
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">Projects</h1>
+      </md-toolbar>
+
+      <md-content class="md-padding" ng-controller="mainController">
+        <div ui-view="projectsList"></div>
+      </md-content>
+    </md-sidenav>
+
+    <md-content flex class="md-padding">
+      <div layout="column" layout-fill layout-align="center center">
+        <div ui-view="projectsDetail"></div>
+      </div>
+    </md-content>
+  </section>
+</div>
