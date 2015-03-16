@@ -13,8 +13,9 @@ My attempt at figuring out MEAN + ui-router + material
 As for mongo:
 
  * Install mongodb per your OS's instructions
- * install the sample data: cd myProjects; mongo < col-projects.js
+ * install the sample data: cd myProjects; mongo < data/col-projects.js
 
+```
    MongoDB shell version: 2.6.7
    connecting to: test
    connection to 127.0.0.1
@@ -32,4 +33,5 @@ As for mongo:
            "upserted" : [ ]
    })
    bye
+```
 
